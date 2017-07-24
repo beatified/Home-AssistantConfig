@@ -1,0 +1,291 @@
+#Available Scenes
+#Whole House White
+#Whole House Blue
+#Whole House Off
+#Whole House Off 30 min
+#Night Light
+#Sleeping
+#Reset to White
+#Night Movie Mode
+#Day Movie Mode
+######################################################################################
+  - name: Whole House White
+######################################################################################
+    entities:
+      light.hue_color_lamp_1:
+        state: on
+        transition: 2
+        brightness: 255
+        color_temp: 346
+      light.hue_color_lamp_2:
+        state: on
+        transition: 2
+        brightness: 255
+        color_temp: 346
+      light.hue_color_lamp_3:
+        state: off
+      light.hue_color_lamp_4:
+        state: on
+        transition: 2
+        brightness: 255
+        color_temp: 346
+      light.hue_color_lamp_5:
+        state: on
+        transition: 2
+        brightness: 255
+        color_temp: 346
+      light.hue_color_lamp_6:
+        state: on
+        transition: 2
+        brightness: 255
+        color_temp: 346
+      light.hue_color_lamp_7:
+        state: on
+        transition: 2
+        brightness: 255
+        color_temp: 346
+      light.hue_color_lamp_8:
+        state: on
+        transition: 2
+        brightness: 255
+        color_temp: 346
+######################################################################################
+  - name: Whole House Blue
+######################################################################################
+    entities:
+      light.hue_color_lamp_1:
+        state: on
+        transition: 2
+        brightness: 255
+        color_name: blue
+      light.hue_color_lamp_2:
+        state: on
+        transition: 2
+        brightness: 255
+        color_name: blue
+      light.hue_color_lamp_3:
+        state: off
+      light.hue_color_lamp_4:
+        state: on
+        transition: 2
+        brightness: 255
+        color_name: blue
+      light.hue_color_lamp_5:
+        state: on
+        transition: 2
+        brightness: 255
+        color_name: blue
+      light.hue_color_lamp_6:
+        state: on
+        transition: 2
+        brightness: 255
+        color_name: blue
+      light.hue_color_lamp_7:
+        state: on
+        transition: 2
+        brightness: 255
+        color_name: blue
+      light.hue_color_lamp_8:
+        state: on
+        transition: 2
+        brightness: 255
+        color_name: blue
+######################################################################################
+  - name: Whole House Off
+######################################################################################
+    entities:
+      light.hue_color_lamp_1:
+        state: off
+      light.hue_color_lamp_2:
+        state: off
+      light.hue_color_lamp_3:
+        state: off
+      light.hue_color_lamp_4:
+        state: off
+      light.hue_color_lamp_5:
+        state: off
+      light.hue_color_lamp_6:
+        state: off
+      light.hue_color_lamp_7:
+        state: off
+      light.hue_color_lamp_8:
+        state: off
+######################################################################################
+  - name: Whole House Off 30 min
+######################################################################################
+    entities:
+      light.hue_color_lamp_1:
+        state: off
+        transition: 1800
+      light.hue_color_lamp_2:
+        state: off
+        transition: 1800
+      light.hue_color_lamp_3:
+        state: off
+        transition: 1800
+      light.hue_color_lamp_4:
+        state: off
+        transition: 1800
+      light.hue_color_lamp_5:
+        state: off
+        transition: 1800
+      light.hue_color_lamp_6:
+        state: off
+        transition: 1800
+      light.hue_color_lamp_7:
+        state: off
+        transition: 1800
+      light.hue_color_lamp_8:
+        state: off
+        transition: 1800
+######################################################################################
+  - name: Night Light
+######################################################################################
+    entities:
+      light.hue_color_lamp_1:
+        state: on
+        transition: 0
+        brightness: 50
+        color_name: blue
+      light.hue_color_lamp_2:
+        state: on
+        transition: 0
+        brightness: 10
+        color_name: blue
+      light.hue_color_lamp_3:
+        state: off
+      light.hue_color_lamp_4:
+        state: on
+        transition: 0
+        brightness: 10
+        color_name: blue
+      light.hue_color_lamp_5:
+        state: on
+        transition: 0
+        brightness: 10
+        color_name: blue
+      light.hue_color_lamp_6:
+        state: off
+      light.hue_color_lamp_7:
+        state: off
+      light.hue_color_lamp_8:
+        state: off
+######################################################################################
+  - name: Sleeping
+######################################################################################
+    entities:
+      light.hue_color_lamp_1:
+        state: off
+      light.hue_color_lamp_2:
+        state: off
+      light.hue_color_lamp_3:
+        state: off
+      light.hue_color_lamp_4:
+        state: off
+      light.hue_color_lamp_5:
+        state: on
+        transition: 0
+        brightness: 10
+        color_name: blue
+      light.hue_color_lamp_6:
+        state: off
+      light.hue_color_lamp_7:
+        state: off
+      light.hue_color_lamp_8:
+        state: off
+######################################################################################
+  - name: Reset to White
+######################################################################################
+    entities:
+      light.hue_color_lamp_1:
+        state: on
+        transition: 0
+        brightness: 1
+        color_temp: 346
+      light.hue_color_lamp_2:
+        state: on
+        transition: 0
+        brightness: 1
+        color_temp: 346
+      light.hue_color_lamp_3:
+        state: off
+      light.hue_color_lamp_4:
+        state: on
+        transition: 0
+        brightness: 1
+        color_temp: 346
+      light.hue_color_lamp_5:
+        state: on
+        transition: 0
+        brightness: 1
+        color_temp: 346
+      light.hue_color_lamp_6:
+        state: on
+        transition: 0
+        brightness: 1
+        color_temp: 346
+      light.hue_color_lamp_7:
+        state: on
+        transition: 0
+        brightness: 1
+        color_temp: 346
+      light.hue_color_lamp_8:
+        state: on
+        transition: 0
+        brightness: 1
+        color_temp: 346
+######################################################################################
+  - name: Night Movie Mode
+######################################################################################
+    entities:
+      light.hue_color_lamp_1:#Livingroom
+        state: off
+      light.hue_color_lamp_2:#Stuart's Room
+        state: off
+      light.hue_color_lamp_3:#Small Bedroom
+        state: off
+      light.hue_color_lamp_4:#Bathroom
+        state: on
+        transition: 5
+        brightness: 100
+        color_name: blue
+      light.hue_color_lamp_5:#Hallway
+        state: on
+        transition: 5
+        brightness: 50
+        color_name: blue
+      light.hue_color_lamp_6:#Kitchen
+        state: on
+        transition: 5
+        brightness: 50
+        color_name: blue
+      light.hue_color_lamp_7:#Kitchen
+        state: on
+        transition: 5
+        brightness: 50
+        color_name: blue
+      light.hue_color_lamp_8:#Kitchen
+        state: on
+        transition: 5
+        brightness: 50
+        color_name: blue
+######################################################################################
+  - name: Day Movie Mode
+######################################################################################
+    entities:
+      light.hue_color_lamp_1:#Livingroom
+        state: off
+      light.hue_color_lamp_2:#Stuart's Room
+        state: off
+      light.hue_color_lamp_3:#Small Bedroom
+        state: off
+      light.hue_color_lamp_4:#Bathroom
+        state: off
+      light.hue_color_lamp_5:#Hallway
+        state: off
+      light.hue_color_lamp_6:#Kitchen
+        state: off
+      light.hue_color_lamp_7:#Kitchen
+        state: off
+      light.hue_color_lamp_8:#Kitchen
+        state: off

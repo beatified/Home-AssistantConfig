@@ -1,0 +1,20 @@
+zone:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  radius: 50
+  icon: mdi:home-map-marker
+  
+zone 2:
+  name: Church Irvine
+  latitude: !secret church_irvine_lat
+  longitude: !secret church_irvine_long
+  radius: 200
+  icon: mdi:church
+  
+zone 3:
+  name: Church Anaheim
+  latitude: !secret church_anaheim_lat
+  longitude: !secret church_anaheim_long
+  radius: 200
+  icon: mdi:church

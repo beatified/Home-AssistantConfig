@@ -1,0 +1,11 @@
+  livingroom_light_on:
+    alias: 'Turn Livingroom Light On'
+    sequence:
+      - service: light.turn_on
+        entity_id: light.hue_color_lamp_1
+  livingroom_light_off:
+    alias: 'Turn Livingroom Light Off'
+    sequence:
+      - service: light.turn_off
+        entity_id: light.hue_color_lamp_1
+        

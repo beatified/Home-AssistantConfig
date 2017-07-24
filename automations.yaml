@@ -1,0 +1,106 @@
+  - alias: "Yard Input Effect"
+    initial_state: True
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: input_select.yard_led_effect
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "home/mqttstrip/seteffect"
+          payload: '{{ trigger.to_state.state | string }}'
+######################################################################################
+  - alias: "Yard Animation Speed"
+    initial_state: True
+    hide_entity: False
+    trigger:
+      - platform: state
+        entity_id: input_slider.yard_animation_speed
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "home/mqttstrip/setanimationspeed"
+          payload: '{{ trigger.to_state.state | int }}'
+######################################################################################
+  - alias: "Dim Lights for Bed"
+    trigger:
+      - platform: time
+        at: '23:30:00'
+#    condition:
+#      - platform: owntracks
+#        entity_id: device_tracker.beatified_stuart_s7e
+#        zone: home
+    action:
+        service: scene.turn_on
+        entity_id: scene.whole_house_off_30_min
+######################################################################################
+  - alias: "Media player paused/stopped"
+    trigger:
+      - platform: state
+        entity_id: media_player.spotify
+        from: 'playing'
+        to: 'paused'
+    condition:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+    action:
+        service: scene.turn_on
+        entity_id: scene.whole_house_white
+######################################################################################
+  - alias: "Media player Playing"
+    trigger:
+      - platform: state
+        entity_id: media_player.spotify
+        from: 'paused'
+        to: 'playing'
+    condition:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+    action:
+        service: scene.turn_on
+        entity_id: scene.whole_house_off
+######################################################################################
+  - alias: "Get ready for Bed"
+    trigger:
+      - platform: time
+        at: '00:00:00'
+    action:
+        service: scene.turn_on
+        entity_id: scene.night_light
+######################################################################################
+  - alias: "Sleeping"
+    trigger:
+      - platform: time
+        at: '00:15:00'
+    action:
+        service: scene.turn_on
+        entity_id: scene.sleeping
+######################################################################################
+  - alias: "Reset to White"
+    trigger:
+      - platform: time
+        at: '06:00:00'
+    action:
+      - service: scene.turn_on
+        entity_id: scene.reset_to_white
+#      - delay 00:00:05
+#      - service: scene.turn_on
+#        entity_id: scene.whole_house_off
+######################################################################################
+  - alias: "Turn Off"
+    trigger:
+      - platform: time
+        at: '06:00:10'
+    action:
+      - service: scene.turn_on
+        entity_id: scene.whole_house_off
+######################################################################################
+  - alias: "Anthem Off"
+    trigger:
+      - platform: time
+        at: '00:00:30'
+    action:
+      - service: media_player.turn_off
+        entity_id: media_player.anthem_mrx_520

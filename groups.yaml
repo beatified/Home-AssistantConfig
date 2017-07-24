@@ -1,0 +1,55 @@
+#Tabs
+lights_tab:
+  view: yes
+  name: Lights
+  entities:
+    - group.lights
+    - group.kitchen_lights
+    - group.led_strips
+    
+scenes_tab:
+  view: yes
+  name: Scenes
+  entities:
+    - group.scenes
+    
+media_players_tab:
+  view: yes
+  name: Media Players
+  entities:
+    - media_player.anthem_mrx_520
+    - media_player.kodi
+    - media_player.roku_yp00en323215
+    - media_player.spotify
+    
+#Cards
+lights:
+  name: Lights
+  entities:
+    - light.hue_color_lamp_1
+    - light.hue_color_lamp_2
+    - light.hue_color_lamp_3
+    - light.hue_color_lamp_4
+    - light.hue_color_lamp_5
+
+led_strips:
+  name: LED Strips
+  entities:
+    - light.yard_led_strip
+    - automation.yard_animation_speed
+    - automation.yard_input_effect
+    - input_slider.yard_animation_speed
+    
+scenes:
+  name: Scenes
+    - scene.whole_house_white
+    - scene.whole_house_off
+    - scene.whole_house_blue
+    
+kitchen_lights:
+  name: Kitchen
+  icon: mdi:ceiling-light
+  entities:
+    - light.hue_color_lamp_6
+    - light.hue_color_lamp_7
+    - light.hue_color_lamp_8
